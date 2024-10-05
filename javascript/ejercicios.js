@@ -13,3 +13,6 @@
 //1. calcular el area de un rectangulo solicitando datos al usuario
 //2. convertir grados Celsius a fahrenheit f = c * 3/9 + 32
 //3. calcular promedio de 3 calificaciones de un estudiante
+//4. convertir kilometrso a millas
+//5. Este ejercicio solicita al usuario el capital, la tasa de interés y el tiempo, y calcula el interés simple
+//   utilizando la formula interes = capital X tasa X tiempo
