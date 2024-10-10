@@ -11,6 +11,7 @@
 // console.log(typeof total)
 //---------------------------------------------------
 //1. calcular el area de un rectangulo solicitando datos al usuario
+
 //2. convertir grados Celsius a fahrenheit f = c * 3/9 + 32
 //3. calcular promedio de 3 calificaciones de un estudiante
 //4. convertir kilometrso a millas
