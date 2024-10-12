@@ -187,6 +187,8 @@ Cada tarea debe tener un identificador único que se utiliza para actualizar o e
 El programa debe mostrar todas las tareas en un formato claro.
 El usuario debe poder actualizar la descripción y/o la fecha de vencimiento de una tarea.
 El usuario debe poder eliminar una tarea especificando su identificador."""
+from datetime import datetime
+
 tareas = []
 idTarea = 1
 
@@ -205,6 +207,8 @@ while True :
         descripcion = input("Descripcion de la tarea :")
         fechaVencimiento = input("Fecha de vencimiento (dd/mm/aaa): ")
 
+        fechaVencimiento = datetime.strptime(fechaVencimiento, "%d/%m/%Y")
+
         tareas.append({"id": idTarea, "descripcion": descripcion, "fechaVencimiento": fechaVencimiento})
         print(f"Tarea {idTarea} creada con exito \n")
         idTarea += 1
@@ -221,7 +225,7 @@ while True :
 
     #Actualizar tarea----------------------
     elif  opcion == "3":
-        tareEncontrada = False
+        tarea_encontrada = False
         idActualizar = int(input("Ingrese el ID que quiere actualizar: "))
         for i in tareas :
             if i ["id"] == idActualizar :
@@ -232,22 +236,22 @@ while True :
                 if nuevaFecha :
                     i["fechaVencimiento"] = nuevaFecha    
                     print(f"Tarea {idActualizar} actualizado con exito\n")
-                    tareEncontrada = True
+                    tarea_encontrada = True
                     break
-        if not tareEncontrada :
+        if not tarea_encontrada :
             print(f"No se encontro la tarea con el ID: {idActualizar}\n")
 
     #Eliminar tarea-------------------------------------     
     elif opcion == "4":
         idEliminar = int(input("Ingrese el ID a eliminar: "))
-        tareEncontrada = False
+        tarea_encontrada = False
         for i in tareas :
             if i ["id"] == idEliminar:  
                 tareas.remove(i) 
                 print(f"Tarea {idEliminar} eliminada exitosamente ")
-                tareEncontrada = True
+                tarea_encontrada = True
                 break
-        if not tareEncontrada :
+        if not tarea_encontrada :
             print(f" No se encontro la tarea con el ID {idEliminar}")     
 
     #-salir de la tarea-------
