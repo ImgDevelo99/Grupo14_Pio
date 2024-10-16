@@ -2,7 +2,7 @@
 es una estructura de datos que almacena pares, clave , valor. cada clave esta asociada a un valor, se conoce como:
 "par clave-valor". son mutables que se pueden cambiar,
 """
-# milista =[ 23, 3,45,67,89]
+# milista =[ 23, 3,45,67,89 []]
 
 # nombreDiccionario = {
 #     "clave1": "valor1", # calve1 = "un valor"
@@ -78,4 +78,7 @@ nombre = input("ingrese su nombre")#
 estudiante["datos"] = nombre# agrego al diccionario
 
 print(f"el nombre es {estudiante["datos"]}")#imprimo
+
+#-------------------------------------------------------------------
+
 
